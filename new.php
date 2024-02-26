@@ -9,15 +9,15 @@
   <body>
    <div class="container">
     <?php
-    $sql = "SELECT * from `class record`";
+    $sql ="SELECT * FROM `student`";
     $result = mysqli_query($conn, $sql);
     if(mysqli_num_rows($result)>0){
         echo '<table class="table">';
         echo "<thead>";
         echo "<tr>";
-        echo "<th>ID</th>";
-         echo "<th>Name</th>";
-          echo "<th>Address</th>";
+        echo "<th>student name</th>";
+         echo "<th>roll no.</th>";
+          echo "<th>address</th>";
            echo "<th>dob</th>";
             echo "</tr>";
             echo "</thead>";
@@ -25,9 +25,9 @@
             echo "<tbody>";
             while($row = mysqli_fetch_assoc($result)){
                 echo "<tr>";
-                echo "<td>" . $row["id"] . "</td>";
-                 echo "<td>" . $row["Name"] . "</td>";
-                  echo "<td>" . $row["Address"] . "</td>";
+                echo "<td>" . $row["name"] . "</td>";
+                 echo "<td>" . $row["roll"] . "</td>";
+                  echo "<td>" . $row["address"] . "</td>";
                    echo "<td>" . $row["dob"] . "</td>";
             }
 
